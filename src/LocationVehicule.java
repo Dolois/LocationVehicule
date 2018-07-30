@@ -8,7 +8,7 @@ public class LocationVehicule {
     String couleur;
     int kilometrage;	// limite de kilométrage
     double cout;		// cout au kilomètre
-    double prix;		// prix de la location a partir de la limite de kilomètres
+    double prix;		// prix de la location a partir de la limite de kilométrage
     
 	public String getMarque() {
 		return marque;

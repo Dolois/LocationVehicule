@@ -16,24 +16,24 @@ public class Application
     	vo.loc.setKilometrage(500);
     	vo.loc.setCout(0.85);
     	vo.loc.setPrix(0);
-		System.out.println("La location de la voiture " + vo.loc.getMarque() + " me revient à " + vo.loc.getPrix());
+		System.out.println("La location du véhicule " + vo.loc.getMarque() + " me revient à " + vo.loc.getPrix());
     	
-    	mo.setMarque("Yamaha");
-    	mo.setCouleur("noire");
-    	mo.setPuissance(9);
-    	mo.setCarburant("Essence");
-    	mo.setKilometrage(500);
-    	mo.setCout(0.90);
-    	mo.setPrix(0.00);
-		System.out.println("La location de la moto " + vo.getMarque() + " me revient à " + vo.getPrix());
+    	mo.loc.setMarque("Yamaha");
+    	mo.loc.setCouleur("noire");
+    	mo.loc.setPuissance(9);
+    	mo.loc.setCarburant("Essence");
+    	mo.loc.setKilometrage(500);
+    	mo.loc.setCout(0.90);
+    	mo.loc.setPrix(0.00);
+		System.out.println("La location du véhicule " + mo.loc.getMarque() + " me revient à " + mo.loc.getPrix());
     	
-    	bo.setMarque("Beneteau");
-    	bo.setCouleur("blanc");
-    	bo.setPuissance(9);
-    	bo.setCarburant("Essence");
-    	bo.setKilometrage(500);
-    	bo.setCout(0.99);
-    	bo.setPrix(0.00);
-		System.out.println("La location du bateau " + vo.getMarque() + " me revient à " + vo.getPrix());
+    	bo.loc.setMarque("Beneteau");
+    	bo.loc.setCouleur("blanc");
+    	bo.loc.setPuissance(9);
+    	bo.loc.setCarburant("Essence");
+    	bo.loc.setKilometrage(500);
+    	bo.loc.setCout(0.99);
+    	bo.loc.setPrix(0.00);
+		System.out.println("La location du véhicule " + bo.loc.getMarque() + " me revient à " + bo.loc.getPrix());
     }
 }
