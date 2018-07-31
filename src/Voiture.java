@@ -1,11 +1,11 @@
 
 public class Voiture extends LocationVehicule
-{
-	LocationVehicule loc = new LocationVehicule();
-	
-	public double setMarque(double cout, int kilometrage)
+{	
+	public boolean changerRoues(int roues)
 	{
-		double prix = cout * kilometrage;
-		return prix;
+		if (roues > 0)
+			return true;
+		
+		return false;
 	}
 }

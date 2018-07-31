@@ -1,44 +1,62 @@
+import java.util.Scanner;
 
 public class Application 
 {
 
 	public static void main(String [] args)
     {
+		Scanner sc = new Scanner(System.in);
+		
         Voiture vo = new Voiture();
         Moto mo = new Moto();
         Bateau bo = new Bateau();
     	
-    	vo.loc.setMarque("Audi TT");
-    	vo.loc.setCouleur("grise");
-    	vo.loc.setPuissance(7);
-    	vo.loc.setCarburant("Essence");
-    	vo.loc.setKilometrage(500);					// 500 kilomètres est la limite max par jour
-    	vo.loc.setCout(0.85);						// cout du kilomètre avec une limite de 500 kms par jour
-    	vo.loc.setPrix(0);
-		System.out.println("La location de la voiture " + vo.loc.getMarque() + 
-				" me revient à " + vo.loc.getPrix() + "€ pour " + vo.loc.getKilometrage() + " kms par jour");
+    	vo.setMarque("Audi TT");
+    	vo.setCouleur("grise");
+    	vo.setPuissance(7);
+    	vo.setCarburant("Essence");
+    	
+    	System.out.print("Nombre de kilomètres/jour (max 500kms) pour le vehicule " +
+    					vo.getMarque() + " : ");
+    	int kms = sc.nextInt();
+    	
+    	vo.setKilometrage(kms);					// 500 kilomètres est la limite max par jour
+    	vo.setCout(0.85);						// cout du kilomètre avec une limite de 500 kms par jour
+    	vo.setPrix(0);
+		System.out.println("La location de la voiture " + vo.getMarque() + 
+				" me revient à " + vo.getPrix() + "€ pour " + vo.getKilometrage() + " kms par jour");
 		System.out.println();
     	
-    	mo.loc.setMarque("Yamaha Fazer 800");
-    	mo.loc.setCouleur("noire");
-    	mo.loc.setPuissance(9);
-    	mo.loc.setCarburant("Essence");
-    	mo.loc.setKilometrage(500);					// 500 kilomètres est la limite max par jour
-    	mo.loc.setCout(1.20);						// cout du kilomètre avec une limite de 500 kms par jour
-    	mo.loc.setPrix(0.00);
-		System.out.println("La location de la moto " + mo.loc.getMarque() + 
-				" me revient à " + mo.loc.getPrix() + "€ pour " + mo.loc.getKilometrage() + " kms par jour");
+    	mo.setMarque("Yamaha Fazer 800");
+    	mo.setCouleur("noire");
+    	mo.setPuissance(9);
+    	mo.setCarburant("Essence");
+    	
+    	System.out.print("Nombre de kilomètres/jour (max 500kms) pour le vehicule " +
+    					mo.getMarque() + " : ");
+    	kms = sc.nextInt();
+    	
+    	mo.setKilometrage(kms);					// 500 kilomètres est la limite max par jour
+    	mo.setCout(1.20);						// cout du kilomètre avec une limite de 500 kms par jour
+    	mo.setPrix(0.00);
+		System.out.println("La location de la moto " + mo.getMarque() + 
+				" me revient à " + mo.getPrix() + "€ pour " + mo.getKilometrage() + " kms par jour");
 		System.out.println();
     	
-    	bo.loc.setMarque("Beneteau Flyer 8.8");
-    	bo.loc.setCouleur("blanc");
-    	bo.loc.setPuissance(9);
-    	bo.loc.setCarburant("Essence");
-    	bo.loc.setKilometrage(200);					// 200 noeuds est la limite max par jour
-    	bo.loc.setCout(2.70);						// cout du noeud avec une limite de 200 noeuds par jour
-    	bo.loc.setPrix(0.00);
-		System.out.println("La location du bateau " + bo.loc.getMarque() + 
-				" me revient à " + bo.loc.getPrix() + "€ pour " + bo.loc.getKilometrage() + " noeuds par jour");
+    	bo.setMarque("Beneteau Flyer 8.8");
+    	bo.setCouleur("blanc");
+    	bo.setPuissance(9);
+    	bo.setCarburant("Essence");
+    	
+    	System.out.print("Nombre de noeuds/jour (max 300noeuds) pour le vehicule " +
+    					bo.getMarque() + " : ");
+    	int nds = sc.nextInt();
+    	
+    	bo.setKilometrage(nds);					// 200 noeuds est la limite max par jour
+    	bo.setCout(2.70);						// cout du noeud avec une limite de 200 noeuds par jour
+    	bo.setPrix(0.00);
+		System.out.println("La location du bateau " + bo.getMarque() + 
+				" me revient à " + bo.getPrix() + "€ pour " + bo.getKilometrage() + " noeuds par jour");
 		System.out.println();
     }
 }

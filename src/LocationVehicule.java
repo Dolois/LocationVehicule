@@ -5,9 +5,17 @@ public class LocationVehicule {
     String carburant;
     int puissance;
     String couleur;
-    int kilometrage;	// limite de kilométrage
+    int kilometrage;	// limite de kilométrage par jour
     double cout;		// cout au kilomètre
-    double prix;		// prix de la location a partir de la limite de kilométrage
+    double prix;		// prix de la location a partir de la limite max de kilométrage par jour
+    
+    
+    /* les getters et setters sont des méthodes qui sont partagées
+     * avec les sous-Classes Voiture, Moto et Bateau de la Classe abstraite LocationVehicule
+     *
+     * les getters sont les méthodes d'affectation d'une valeur dans une variable
+     * les setters sont les méthodes de récupération d'une valeur dans une variable
+     * */
     
 	public String getMarque() {
 		return marque;
@@ -46,7 +54,7 @@ public class LocationVehicule {
 		this.cout = cout;
 	}
 	public double getPrix() {
-		return prix = cout * kilometrage;
+		return cout * kilometrage;
 	}
 	public void setPrix(double prix) {
 		this.prix = prix;
